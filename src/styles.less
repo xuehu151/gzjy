@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+@fa-font-path: "../node_modules/font-awesome/fonts";
+@import "~font-awesome/less/font-awesome.less";
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body, div, h1, h2, h3, h4, h5, ul, ol, dl, li, dt, dd, p {
+    margin: 0;
+    padding: 0;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "microsoft yahei", Arial, Helvetica, sans-serif;
+    min-width: 1280px;
+    background: #f1f9ff;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+    margin: 1rem auto;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/*dialog*/
+.alertSuccess {
+    background: #009688 !important;
+    position: absolute;
+    top: 4%;
+    right: 0;
+    margin: 0 auto;
+    display: inline-block;
+    z-index: 9;
+}
+
+.alertWarning {
+    background: #FDD835 !important;
+    position: absolute;
+    top: 4%;
+    right: 0;
+    margin: 0 auto;
+    display: inline-block;
+    z-index: 9;
+}
+
+.alertFail {
+    background: #E53935 !important;
+    position: absolute;
+    top: 4%;
+    right: 0;
+    margin: 0 auto;
+    display: inline-block;
+    z-index: 9;
+}
+
+.cdk-visually-hidden {
+    display: none;
+}

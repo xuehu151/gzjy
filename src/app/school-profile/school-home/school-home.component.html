@@ -1,0 +1,11 @@
+<div class = "school_profile">
+    <div class = "leftJ">
+        <p class = "lanse">{{menuName}}</p>
+        <app-tree-list [treelists] = "menu" [listContent]="pageNumberParent" ></app-tree-list>
+    </div>
+
+    <div class = "second_center">
+        <app-tree-content (pageNumberClick) = "passingNumber($event)"></app-tree-content>
+</div>
+    <div class = "clear"></div>
+</div>

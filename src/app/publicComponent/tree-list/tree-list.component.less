@@ -1,0 +1,48 @@
+@import url("../../comment/commnet");
+
+.show_border {
+    border-top: solid 1px #EDEDED;
+}
+
+.hide_border {
+    border-bottom: none;
+}
+
+.color_bg{
+    color: #ffffff;
+    background: #3bacfa;
+}
+
+li {
+    line-height: 46px;
+    cursor: pointer;
+    display: table;
+    width: 100%;
+    div{
+        border-bottom: 1px solid #EDEDED;
+    }
+    span {
+        display: block;
+        cursor: pointer;
+        height: @height_100;
+        label{
+            display: inline-block;
+            margin-left: .6rem;
+        }
+        ins {
+            text-decoration: none;
+            vertical-align: middle;
+            width: 2rem;
+            text-align: center;
+            display: inline-block;
+        }
+        i {
+            float: right;
+            display: inline-block;
+            height: 100%;
+            line-height: 2.6;
+            margin-right: 1rem;
+        }
+    }
+}
+

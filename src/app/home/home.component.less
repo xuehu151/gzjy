@@ -1,0 +1,60 @@
+.old_box {
+    width: 100%;
+    overflow: hidden;
+    //filter: alpha(opacity=100 finishopacity=50 style=1 startx=0, starty=0, finishx=0, finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#e6f4ff, endcolorstr=#FFFFFF, gradientType=0);
+    //-ms-filter: alpha(opacity=100 finishopacity=50 style=1 startx=0, starty=0, finishx=0, finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#e6f4ff, endcolorstr=#FFFFF, gradientType=0); /*IE8*/
+    background: #e6f4ff; /* 一些不支持背景渐变的浏览器 */
+    background: -moz-linear-gradient(top, #e6f4ff, rgba(255, 255, 255, 0));
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e6f4ff), to(rgba(255, 255, 255, 0)));
+    background: -o-linear-gradient(top, #e6f4ff, rgba(255, 255, 255, 0));
+}
+
+.main {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 20px;
+    .left {
+        float: left;
+        width: 70%;
+        .mTop{
+            .info {
+                width: 48.7%;
+                height: 320px;
+                float: left;
+                background: #fff;
+                -moz-box-shadow: 0px 0px 6px #f0f4f7;
+                -webkit-box-shadow: 0px 0px 6px #f0f4f7;
+                box-shadow: 0px 0px 6px #f0f4f7;
+                border-radius: 5px;
+            }
+            .people {
+                width: 48.7%;
+                height: 320px;
+                float: right;
+                background: #fff;
+                -moz-box-shadow: 0px 0px 6px #f0f4f7;
+                -webkit-box-shadow: 0px 0px 6px #f0f4f7;
+                box-shadow: 0px 0px 6px #f0f4f7;
+                border-radius: 5px;
+            }
+        }
+
+    }
+    .right{
+        width: 28%;
+        float: right;
+        img{
+            margin-bottom: 20px;
+            height: 147px;
+            display: block;
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+
+
+

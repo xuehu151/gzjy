@@ -1,0 +1,138 @@
+@width_100: 100%;
+@height_100: 100%;
+@colorWhite: #fff;
+
+.Thisyear {
+    width: 96%;
+    padding: 0 3%;
+    line-height: 30px;
+    font-size: 14px;
+    border-bottom: dashed 1px #DBDBDB;
+    color: #3E3E3E;
+    .text {
+        float: left;
+        width: 75%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        cursor: pointer;
+        i {
+            display: inline-block;
+            width: 6.5%;
+            color: #2182F0;
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    .time {
+        float: right;
+        width: 25%;
+        text-align: right;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+}
+
+.title {
+    height: 50px;
+    padding: 0 4%;
+    border-bottom: solid #D8D8D8 1px;
+    .left {
+        float: left;
+        width: 52.5%;
+        line-height: 22px;
+        font-size: 14px;
+        color: #2182F0;
+        margin-top: 14px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .more {
+        float: right;
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 14px;
+        color: #2182F0;
+        cursor: pointer;
+    }
+}
+
+.comment {
+    width: 48.7%;
+    height: 320px;
+    background: @colorWhite;
+    -moz-box-shadow: 0 0 6px #f0f4f7;
+    -webkit-box-shadow: 0 0 6px #f0f4f7;
+    box-shadow: 0 0 6px #f0f4f7;
+    border-radius: 5px;
+}
+
+/*
+    二级菜单 菜单树和内容
+*/
+.leftJ {
+    min-width: 24%;
+    min-height: 22rem;
+    background: #fff;
+    border-radius: 10px 10px 0 0;
+    float: left;
+    .lanse {
+        width: 100%;
+        height: 45px;
+        background: #3BACFA;
+        text-align: center;
+        line-height: 45px;
+        color: #fff;
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+.second_center {
+    width: 73.5%;
+    min-height: 35rem;
+    background: #fff;
+    float: left;
+    border-radius: 8px;
+    box-shadow: 0 0 6px #EEEEEE;
+    margin-bottom: 20px;
+    margin-left: 2%;
+    position: relative;
+}
+
+.paginator {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+/*滚动条*/
+::-webkit-scrollbar-track-piece {
+    background-color: #f5f5f5;
+    border-left: 1px solid #d2d2d2;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #c2c2c2;
+    background-clip: padding-box;
+    border: 1px solid #979797;
+    min-height: 28px;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border: 1px solid #636363;
+    background-color: #929292;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+<div class = "center">
+    <div class = "mNav">
+        <span
+                *ngFor = "let educatoin of educationContent;let i=index"
+                [ngClass] = "{'active' : eduItem == i }"
+                (click) = "educationClick(i)">
+            {{educatoin.menu.menuName}}
+        </span>
+        <div class = "clear"></div>
+    </div>
+    <div class = "infoShow">
+        <div class = "leftinfo"
+             *ngFor = "let navTabs of educationContent;let i=index"
+             [style.display] = "eduItem==i? 'block':'none'">
+            <ul>
+                <li class = "Thisyear"
+                    *ngFor = "let cont of navTabs.contentList"
+                    (click)="listDetails(cont.contentId, navTabs.menu.menuName)">
+                    <span class = "text"><i>·</i>{{cont.title}}</span>
+                    <span class = "time">[{{cont.releaseDate | date : 'yyyy-MM-dd'}}]</span>
+                    <div class = "clear"></div>
+                </li>
+            </ul>
+        </div>
+        <div class = "clear"></div>
+    </div>
+</div>

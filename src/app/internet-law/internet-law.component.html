@@ -1,0 +1,15 @@
+<div class="internet_law">
+    <div class = "leftJ">
+        <p class = "lanse">互动平台</p>
+        <app-tree-list [treelists]="menu" [listContent]="pageNumberParent" ></app-tree-list>
+    </div>
+
+    <div class = "second_center">
+        <app-tree-content (pageNumberClick) = "passingNumber($event)"></app-tree-content>
+    </div>
+    <div class="clear"></div>
+</div>
+
+
+
+

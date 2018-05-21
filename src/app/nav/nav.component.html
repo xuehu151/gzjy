@@ -1,0 +1,16 @@
+<div class = "main_box">
+    <div class = "nav_box">
+        <ul class = "nav">
+            <li
+                    *ngFor = "let nav of navBar;let i=index"
+                    [class.active] = nav.check
+                    [routerLink] = nav.fileName
+                    (click) = "clickNav(i, nav.menuId, nav.menuName, nav.fileName)">
+                {{nav.menuName}}
+            </li>
+            <div class = "clear"></div>
+        </ul>
+    </div>
+</div>
+
+

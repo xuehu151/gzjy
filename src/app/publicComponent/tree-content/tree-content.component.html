@@ -1,0 +1,34 @@
+<div class = "divlanse">
+    <b>最新动态</b>
+</div>
+<div class = "tree_content_list">
+    <ul>
+        <li *ngFor = "let treeItem of treeListArray"
+            (click) = "articleDetails(treeItem.contentId)">
+            <span>[ {{treeItem?.releaseDate | date:'yyyy-MM-dd'}} ]</span>
+            <a>
+                {{treeItem?.title}}
+            </a>
+        </li>
+    </ul>
+    <div class = "article" [innerHtml] = "treeContentDetails"></div>
+    <div *ngIf = "!isHasContent" class = "dummy_status">
+        <img src = "../../../assets/image/dummy_status.png" alt = "">
+        <p>暂无内容</p>
+    </div>
+</div>
+
+<div class = "paginator">
+    <app-page
+            [pageParams] = "{
+        curPage : current,
+        pageSize : size,
+        totalNum : totalNum,
+        totalPage : totalPage }"
+            (changeCurPage) = "getPageData($event)">
+    </app-page>
+
+</div>
+
+
+

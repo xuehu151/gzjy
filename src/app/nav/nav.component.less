@@ -1,0 +1,41 @@
+
+.main_box {
+    width: 100%;
+}
+
+.nav_box {
+    width: 100%;
+    background: #0c95f7;
+    .nav {
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        li {
+            float: left;
+            display: block;
+            width: 12%;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            transition: all 0.3s ease 0s;
+            //border-right: #0c95f7 1px solid;
+            cursor: pointer;
+            padding: 1rem 0;
+            outline: none;
+            a{
+                color: white;
+            }
+        }
+        .end_li {
+            border-right: none;
+        }
+        .active {
+            background: url(../../assets/image/nav.png) no-repeat 100% 100%;
+            transition: all 0.3s ease 0s;
+            /*background:#41b0fe;
+            animation:changeBack 500ms linear forwards;*/
+            font-weight: 600;
+        }
+    }
+}

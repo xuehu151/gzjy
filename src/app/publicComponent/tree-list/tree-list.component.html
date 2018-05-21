@@ -1,0 +1,17 @@
+<ul class = "show_border">
+    <li
+            *ngFor = "let item of treelists;let i=index">
+        <div [ngClass] = "{hide_border: item.leaf && item.children && item.children.length, color_bg : i==showClassNumber}" (click) = "itemClick(item)">
+            <span>
+                <ins [ngClass] = "{'fa fa-hand-o-right': i==showClassNumber }"></ins>
+                <label>{{item.data.menuName}}</label>
+                <i [ngClass] = "item.leaf?'fa fa-angle-down':'fa fa-angle-right'" *ngIf = "item.children && item.children.length"></i>
+            </span>
+        </div>
+
+        <!--调用组件本身并 传值给下级: [treelists]="item.items"-->
+        <app-tree-list *ngIf = "item.leaf && item.children && item.children.length" [treelists] = "item.children"></app-tree-list>
+    </li>
+</ul>
+
+

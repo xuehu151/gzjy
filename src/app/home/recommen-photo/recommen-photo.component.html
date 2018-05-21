@@ -1,0 +1,16 @@
+<div class="botBanner">
+    <div class="title">
+        <div class="left">最新图文</div>
+        <!--<div class="more">更多></div>-->
+        <div class="clear"></div>
+    </div>
+    <div class="showBanner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="width: 15%;" *ngFor="let item of imgageArray" (click)="photoCarousel(item)">
+                    <img src="{{imgUrl + item.typeImg}}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

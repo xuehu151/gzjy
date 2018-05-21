@@ -1,0 +1,128 @@
+@import url("../../../comment/commnet");
+
+.more {
+    float: right;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 14px;
+    color: #2182F0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.dynamic {
+    .comment;
+    height: 320px;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 20px;
+    .top {
+        height: 50px;
+        padding: 0 1.66%;
+        border-bottom: solid #D8D8D8 1px;
+        .left {
+            float: left;
+            width: 52.5%;
+            line-height: 22px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #2182F0;
+            margin-top: 14px;
+            cursor: pointer;
+        }
+        .right {
+            width: 47.5%;
+            float: right;
+            ul {
+                width: 80%;
+                margin-top: 18px;
+                float: left;
+                li {
+                    cursor: pointer;
+                    float: left;
+                    font-weight: bold;
+                    width: 30%;
+                    color: #3E3E3E;
+                    padding-left: 2%;
+                    border-left: 2px solid #3E3E3E;
+                    line-height: 14px;
+                    font-size: 14px;
+                }
+                .active {
+                    border-left: 2px solid #0C95F7;
+                    color: #2182F0;
+                }
+            }
+        }
+    }
+    .dynamicMain {
+        padding: 0 0 0 1.66%;
+        .imgDynamic {
+            float: left;
+            width: 50%;
+            height: 220px;
+            margin-top: 20px;
+            .swiper-slide {
+                img {
+                    width: @width_100;
+                    cursor: pointer;
+                }
+                p {
+                    margin: 0 0;
+                    background: rgba(0, 0, 0, 0.4);
+                    line-height: 30px;
+                    width: 100%;
+                    padding-left: 2%;
+                    color: @colorWhite;
+                    font-size: 14px;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+        .textDynamic {
+            float: right;
+            width: 49%;
+            max-height: 15rem;
+            overflow: auto;
+            h4 {
+                font-size: 16px;
+                line-height: 20px;
+                width: 100%;
+                text-align: center;
+                color: #1465C0;
+                margin: 13px 0;
+                cursor: pointer;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .newsText {
+                color: #3E3E3E;
+                font-size: 12px;
+                line-height: 18px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                width: 100%;
+                cursor: pointer;
+            }
+            ul {
+                margin-top: 10px;
+                //border-top: dashed 1px #DBDBDB;
+                overflow: auto;
+                li {
+                    line-height: 27px;
+                    font-size: 14px;
+                    border-bottom: dashed 1px #DBDBDB;
+                    color: #3E3E3E;
+                }
+            }
+        }
+    }
+}

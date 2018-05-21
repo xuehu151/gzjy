@@ -1,0 +1,54 @@
+
+<!--分页组件-->
+<div
+        class = "page_pagination"
+        *ngIf = "pageParams.totalPage>1 && pageParams.totalNum>0">
+    <a>
+        总计 {{pageParams.totalNum}} 条，第 {{pageParams.curPage}} / {{pageParams.totalPage}} 页
+    </a>
+    <button
+            class = "page_default fa fa-angle-double-left first_btn"
+            [routerLink] = "['./']"
+            [disabled] = "pageParams.curPage<=5"
+            [ngClass] = "{'btn_disabled' : pageParams.curPage<=5}"
+            (click) = "changePage(pageParams.curPage-5)"
+            [queryParams] = "{pageNo:pageParams.curPage-5}">
+    </button>
+    <button
+            class = "page_default fa fa-angle-left"
+            [routerLink] = "['./']"
+            (click) = "changePage(pageParams.curPage-1)"
+            [queryParams] = "{pageNo:pageParams.curPage-1}"
+            [disabled] = "pageParams.curPage==1"
+            [ngClass] = "{'btn_disabled' : pageParams.curPage==1}">
+    </button>
+    <button
+            class = "page_default"
+            [routerLink] = "['./']"
+            *ngFor = "let page of pageList"
+            [queryParams] = "page"
+            (click) = "changePage(page.pageNo)"
+            [ngClass] = "{'page_select' : pageParams.curPage==page.pageNo}"
+            [disabled] = "pageParams.curPage==page.pageNo">
+        {{page.pageNo}}
+    </button>
+    <button
+            class = "page_default fa fa-angle-right"
+            [routerLink] = "['./']"
+            (click) = "changePage(pageParams.curPage-(-1))"
+            [queryParams] = "{pageNo:pageParams.curPage-(-1)}"
+            [disabled] = "pageParams.curPage==pageParams.totalPage"
+            [ngClass] = "{'btn_disabled' : pageParams.curPage==pageParams.totalPage}">
+    </button>
+    <button
+            class = "page_default fa fa-angle-double-right"
+            [routerLink] = "['./']"
+            [disabled] = "pageParams.totalPage-pageParams.curPage<=5"
+            [ngClass] = "{'btn_disabled' : pageParams.curPage==pageParams.totalPage}"
+            (click) = "changePage(pageParams.curPage-(-5))"
+            [queryParams] = "{pageNo:pageParams.curPage-(-5)}">
+    </button>
+</div>
+
+
+<div *ngIf = "!pageParams.totalNum"></div>

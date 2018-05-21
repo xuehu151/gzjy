@@ -1,0 +1,15 @@
+<div class = "outfit">
+    <div class = "title">
+        <div class = "left">院属机构</div>
+        <!--<div class = "more">更多></div>-->
+        <div class = "clear"></div>
+    </div>
+    <ul style = "height:203px;">
+        <li class = "Thisyear" *ngFor="let blong of blongModuleContent"
+            (click)="listDetails(blong.contentId)">
+            <span class = "text"><i>·</i>{{blong.menuName}}</span>
+            <div class = "clear"></div>
+        </li>
+        <li *ngIf="hasContentShow">{{noContent}}</li>
+    </ul>
+</div>
